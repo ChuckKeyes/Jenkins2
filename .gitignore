@@ -1,0 +1,30 @@
+# Terraform
+.terraform/
+**/.terraform/**
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+tfplan
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Keep Terraform lock file
+!.terraform.lock.hcl
+!**/.terraform.lock.hcl
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large binaries / provider files
+*.exe
+terraform-provider-*
+**/terraform-provider-*
