@@ -117,3 +117,21 @@ resource "aws_s3_object" "webhook3" {
 
   content_type = "image/png"
 }
+
+resource "aws_s3_object" "s3_contents" {
+  bucket = aws_s3_bucket.frontend.id
+  key    = "Proof/S3-contents.png"
+  source = "${path.module}/Proof/S3-contents.png"
+  etag   = filemd5("${path.module}/Proof/S3-contents.png")
+
+  content_type = "image/png"
+}
+
+resource "aws_s3_object" "webhook_history" {
+  bucket = aws_s3_bucket.frontend.id
+  key    = "Proof/webhook-history.png"
+  source = "${path.module}/Proof/webhook-history.png"
+  etag   = filemd5("${path.module}/Proof/webhook-history.png")
+
+  content_type = "image/png"
+}
